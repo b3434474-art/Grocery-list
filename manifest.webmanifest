@@ -1,0 +1,1 @@
+{"name":"Grocery Assistant","short_name":"Groceries","start_url":"./","display":"standalone","background_color":"#f5f7f5","theme_color":"#16a34a","description":"A fast, private, offline-first grocery assistant.","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
