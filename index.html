@@ -11,88 +11,19 @@
 </head>
 <body>
   <div id="app">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">Your grocery assistant</p>
-        <h1 id="greeting">Good afternoon 👋</h1>
-      </div>
-      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
-    </header>
-
+    <header class="topbar"><div><p class="eyebrow">Your grocery assistant</p><h1 id="greeting">Good afternoon 👋</h1></div><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">🌙</button></header>
     <main id="main" class="content">
-      <section id="homeView" class="view active">
-        <div class="hero-card">
-          <div class="hero-row">
-            <div><span class="label">Weekly Groceries</span><strong id="progressText">0 / 0 items</strong></div>
-            <span id="progressPercent">0%</span>
-          </div>
-          <div class="progress"><span id="progressBar"></span></div>
-          <div class="hero-meta"><span id="totalText">Estimated total: $0.00</span><span id="remainingText">Nothing added yet</span></div>
-        </div>
-        <div class="search-wrap"><span>🔎</span><input id="searchInput" type="search" placeholder="Search groceries..." autocomplete="off" /></div>
-        <div class="quick-add"><input id="quickInput" placeholder="Add an item, e.g. 3 apples" autocomplete="off" /><button id="quickAddBtn" class="primary">Add</button></div>
-        <div id="suggestions" class="chips"></div>
-        <div id="listContainer" class="list-container"></div>
-      </section>
-
-      <section id="shoppingView" class="view">
-        <div class="section-head"><div><p class="eyebrow">Distraction-free</p><h2>🛒 Shopping Mode</h2></div><button id="wakeBtn" class="small-btn">Keep awake</button></div>
-        <div class="shopping-progress"><strong id="shoppingProgress">0 / 0</strong><span>items completed</span></div>
-        <div id="shoppingList" class="shopping-list"></div>
-      </section>
-
-      <section id="mealsView" class="view">
-        <div class="section-head"><div><p class="eyebrow">Plan ahead</p><h2>🍽️ Meals</h2></div><button id="addMealBtn" class="small-btn">+ Meal</button></div>
-        <div class="meal-grid" id="mealGrid"></div>
-      </section>
-
-      <section id="listsView" class="view">
-        <div class="section-head"><div><p class="eyebrow">Organize everything</p><h2>📋 Lists</h2></div><button id="newListBtn" class="small-btn">+ List</button></div>
-        <div id="listsGrid" class="lists-grid"></div>
-      </section>
-
-      <section id="settingsView" class="view">
-        <div class="section-head"><div><p class="eyebrow">Make it yours</p><h2>⚙️ Settings</h2></div></div>
-        <div class="settings-card">
-          <div class="cloud-box">
-            <div><strong>☁️ Cloud Sync</strong><p id="cloudStatus">Checking connection…</p></div>
-            <button id="cloudAuthBtn" class="small-btn">Sign in</button>
-          </div>
-          <label id="emailRow">Email for cloud sync<input id="cloudEmail" type="email" autocomplete="email" placeholder="you@example.com" /></label>
-          <label>Theme<select id="themeSelect"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
-          <label>Currency<select id="currencySelect"><option value="USD">USD ($)</option><option value="CAD">CAD ($)</option><option value="GBP">GBP (£)</option><option value="EUR">EUR (€)</option></select></label>
-          <label class="switch-row"><span>Shopping completion sounds</span><input id="soundToggle" type="checkbox" /></label>
-          <label class="switch-row"><span>Auto-hide purchased items</span><input id="hideBoughtToggle" type="checkbox" /></label>
-          <label class="switch-row"><span>Large text</span><input id="largeTextToggle" type="checkbox" /></label>
-          <div class="settings-actions"><button id="exportBtn" class="small-btn">Export JSON</button><button id="clearBtn" class="danger">Clear all data</button></div>
-        </div>
-        <p class="privacy-note">🔒 Local-first by default. Cloud sync is optional. Your browser uses a publishable Supabase key; database access is protected by Row Level Security.</p>
-      </section>
+      <section id="homeView" class="view active"><div class="hero-card"><div class="hero-row"><div><span class="label">Weekly Groceries</span><strong id="progressText">0 / 0 items</strong></div><span id="progressPercent">0%</span></div><div class="progress"><span id="progressBar"></span></div><div class="hero-meta"><span id="totalText">Estimated total: $0.00</span><span id="remainingText">Nothing added yet</span></div></div><div class="search-wrap"><span>🔎</span><input id="searchInput" type="search" placeholder="Search groceries..." autocomplete="off" /></div><div class="quick-add"><input id="quickInput" placeholder="Add an item, e.g. 3 apples" autocomplete="off" /><button id="quickAddBtn" class="primary">Add</button></div><div id="suggestions" class="chips"></div><div id="listContainer" class="list-container"></div></section>
+      <section id="shoppingView" class="view"><div class="section-head"><div><p class="eyebrow">Distraction-free</p><h2>🛒 Shopping Mode</h2></div><button id="wakeBtn" class="small-btn">Keep awake</button></div><div class="shopping-progress"><strong id="shoppingProgress">0 / 0</strong><span>items completed</span></div><div id="shoppingList" class="shopping-list"></div></section>
+      <section id="mealsView" class="view"><div class="section-head"><div><p class="eyebrow">Plan ahead</p><h2>🍽️ Meals</h2></div><button id="addMealBtn" class="small-btn">+ Meal</button></div><div class="meal-grid" id="mealGrid"></div></section>
+      <section id="listsView" class="view"><div class="section-head"><div><p class="eyebrow">Organize everything</p><h2>📋 Lists</h2></div><button id="newListBtn" class="small-btn">+ List</button></div><div id="listsGrid" class="lists-grid"></div></section>
+      <section id="settingsView" class="view"><div class="section-head"><div><p class="eyebrow">Make it yours</p><h2>⚙️ Settings</h2></div></div><div class="settings-card"><div class="cloud-box"><div><strong>☁️ Cloud Sync</strong><p id="cloudStatus">Checking connection…</p></div><button id="cloudAuthBtn" class="small-btn">Sign in</button></div><label id="emailRow">Email for cloud sync<input id="cloudEmail" type="email" autocomplete="email" placeholder="you@example.com" /></label><label>Theme<select id="themeSelect"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label><label>Currency<select id="currencySelect"><option value="USD">USD ($)</option><option value="CAD">CAD ($)</option><option value="GBP">GBP (£)</option><option value="EUR">EUR (€)</option></select></label><label class="switch-row"><span>Shopping completion sounds</span><input id="soundToggle" type="checkbox" /></label><label class="switch-row"><span>Auto-hide purchased items</span><input id="hideBoughtToggle" type="checkbox" /></label><label class="switch-row"><span>Large text</span><input id="largeTextToggle" type="checkbox" /></label><div class="settings-actions"><button id="exportBtn" class="small-btn">Export JSON</button><button id="clearBtn" class="danger">Clear all data</button></div></div><p class="privacy-note">🔒 Local-first by default. Cloud sync is optional. Your browser uses a publishable Supabase key; database access is protected by Row Level Security.</p></section>
     </main>
-
     <button id="fab" class="fab" aria-label="Add grocery item">+</button>
-    <nav class="bottom-nav" aria-label="Main navigation">
-      <button data-view="homeView" class="nav-btn active">🏠<span>Home</span></button>
-      <button data-view="shoppingView" class="nav-btn">🛒<span>Shop</span></button>
-      <button data-view="mealsView" class="nav-btn">🍽️<span>Meals</span></button>
-      <button data-view="listsView" class="nav-btn">📋<span>Lists</span></button>
-      <button data-view="settingsView" class="nav-btn">⚙️<span>Settings</span></button>
-    </nav>
+    <nav class="bottom-nav" aria-label="Main navigation"><button data-view="homeView" class="nav-btn active">🏠<span>Home</span></button><button data-view="shoppingView" class="nav-btn">🛒<span>Shop</span></button><button data-view="mealsView" class="nav-btn">🍽️<span>Meals</span></button><button data-view="listsView" class="nav-btn">📋<span>Lists</span></button><button data-view="settingsView" class="nav-btn">⚙️<span>Settings</span></button></nav>
   </div>
-
-  <dialog id="itemDialog"><form method="dialog" id="itemForm"><div class="dialog-head"><h2 id="dialogTitle">Add item</h2><button type="button" class="icon-btn" id="closeDialog">✕</button></div>
-    <label>Item name<input id="itemName" required maxlength="80" /></label>
-    <div class="two-col"><label>Quantity<input id="itemQty" type="number" min="0.01" step="0.01" value="1" /></label><label>Unit<select id="itemUnit"><option value="">each</option><option>lb</option><option>oz</option><option>kg</option><option>g</option><option>gallon</option><option>liter</option><option>dozen</option><option>bunch</option><option>pack</option></select></label></div>
-    <div class="two-col"><label>Category<select id="itemCategory"><option>Produce</option><option>Dairy</option><option>Meat</option><option>Bakery</option><option>Frozen</option><option>Pantry</option><option>Beverages</option><option>Household</option><option>Personal Care</option><option>Pet Supplies</option><option>Other</option></select></label><label>Price<input id="itemPrice" type="number" min="0" step="0.01" placeholder="Optional" /></label></div>
-    <label>Brand<input id="itemBrand" maxlength="60" placeholder="Optional" /></label>
-    <label>Notes<textarea id="itemNotes" rows="2" maxlength="200" placeholder="Optional"></textarea></label>
-    <label class="switch-row"><span>⭐ Favorite</span><input id="itemFavorite" type="checkbox" /></label>
-    <div class="dialog-actions"><button type="button" class="secondary" id="cancelDialog">Cancel</button><button class="primary" value="default">Save item</button></div>
-  </form></dialog>
-
+  <dialog id="itemDialog"><form method="dialog" id="itemForm"><div class="dialog-head"><h2 id="dialogTitle">Add item</h2><button type="button" class="icon-btn" id="closeDialog">✕</button></div><label>Item name<input id="itemName" required maxlength="80" /></label><div class="two-col"><label>Quantity<input id="itemQty" type="number" min="0.01" step="0.01" value="1" /></label><label>Unit<select id="itemUnit"><option value="">each</option><option>lb</option><option>oz</option><option>kg</option><option>g</option><option>gallon</option><option>liter</option><option>dozen</option><option>bunch</option><option>pack</option></select></label></div><div class="two-col"><label>Category<select id="itemCategory"><option>Produce</option><option>Dairy</option><option>Meat</option><option>Bakery</option><option>Frozen</option><option>Pantry</option><option>Beverages</option><option>Household</option><option>Personal Care</option><option>Pet Supplies</option><option>Other</option></select></label><label>Price<input id="itemPrice" type="number" min="0" step="0.01" placeholder="Optional" /></label></div><label>Brand<input id="itemBrand" maxlength="60" placeholder="Optional" /></label><label>Notes<textarea id="itemNotes" rows="2" maxlength="200" placeholder="Optional"></textarea></label><label class="switch-row"><span>⭐ Favorite</span><input id="itemFavorite" type="checkbox" /></label><div class="dialog-actions"><button type="button" class="secondary" id="cancelDialog">Cancel</button><button class="primary" value="default">Save item</button></div></form></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase.js"></script>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase.js"></script><script src="app.js"></script><script src="cloud-sync.js"></script>
 </body>
 </html>
