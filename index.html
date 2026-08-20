@@ -23,23 +23,14 @@
       <section id="homeView" class="view active">
         <div class="hero-card">
           <div class="hero-row">
-            <div>
-              <span class="label">Weekly Groceries</span>
-              <strong id="progressText">0 / 0 items</strong>
-            </div>
+            <div><span class="label">Weekly Groceries</span><strong id="progressText">0 / 0 items</strong></div>
             <span id="progressPercent">0%</span>
           </div>
           <div class="progress"><span id="progressBar"></span></div>
           <div class="hero-meta"><span id="totalText">Estimated total: $0.00</span><span id="remainingText">Nothing added yet</span></div>
         </div>
-
         <div class="search-wrap"><span>🔎</span><input id="searchInput" type="search" placeholder="Search groceries..." autocomplete="off" /></div>
-
-        <div class="quick-add">
-          <input id="quickInput" placeholder="Add an item, e.g. 3 apples" autocomplete="off" />
-          <button id="quickAddBtn" class="primary">Add</button>
-        </div>
-
+        <div class="quick-add"><input id="quickInput" placeholder="Add an item, e.g. 3 apples" autocomplete="off" /><button id="quickAddBtn" class="primary">Add</button></div>
         <div id="suggestions" class="chips"></div>
         <div id="listContainer" class="list-container"></div>
       </section>
@@ -63,6 +54,11 @@
       <section id="settingsView" class="view">
         <div class="section-head"><div><p class="eyebrow">Make it yours</p><h2>⚙️ Settings</h2></div></div>
         <div class="settings-card">
+          <div class="cloud-box">
+            <div><strong>☁️ Cloud Sync</strong><p id="cloudStatus">Checking connection…</p></div>
+            <button id="cloudAuthBtn" class="small-btn">Sign in</button>
+          </div>
+          <label id="emailRow">Email for cloud sync<input id="cloudEmail" type="email" autocomplete="email" placeholder="you@example.com" /></label>
           <label>Theme<select id="themeSelect"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
           <label>Currency<select id="currencySelect"><option value="USD">USD ($)</option><option value="CAD">CAD ($)</option><option value="GBP">GBP (£)</option><option value="EUR">EUR (€)</option></select></label>
           <label class="switch-row"><span>Shopping completion sounds</span><input id="soundToggle" type="checkbox" /></label>
@@ -70,12 +66,11 @@
           <label class="switch-row"><span>Large text</span><input id="largeTextToggle" type="checkbox" /></label>
           <div class="settings-actions"><button id="exportBtn" class="small-btn">Export JSON</button><button id="clearBtn" class="danger">Clear all data</button></div>
         </div>
-        <p class="privacy-note">🔒 Your grocery data is stored locally in this browser. No account is required.</p>
+        <p class="privacy-note">🔒 Local-first by default. Cloud sync is optional. Your browser uses a publishable Supabase key; database access is protected by Row Level Security.</p>
       </section>
     </main>
 
     <button id="fab" class="fab" aria-label="Add grocery item">+</button>
-
     <nav class="bottom-nav" aria-label="Main navigation">
       <button data-view="homeView" class="nav-btn active">🏠<span>Home</span></button>
       <button data-view="shoppingView" class="nav-btn">🛒<span>Shop</span></button>
@@ -96,6 +91,8 @@
   </form></dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
